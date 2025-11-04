@@ -1,15 +1,15 @@
 package com.springboot.interceptor;
 
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
-
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletResponse;
 import org.springframework.stereotype.Component;
-import org.springframework.web.servlet.handler.HandlerInterceptorAdapter;
+import org.springframework.web.servlet.HandlerInterceptor;
+
 
 @Component
-public class RequestHeaderInterceptor extends HandlerInterceptorAdapter {
+public class RequestHeaderInterceptor implements HandlerInterceptor {
 
-	@Override
+
 	public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler)
 			throws Exception {
 		// TODO Auto-generated method stub
@@ -19,6 +19,6 @@ public class RequestHeaderInterceptor extends HandlerInterceptorAdapter {
 			throw new InvalidHeaderFieldException("Invalid request");
 		}*/
 
-		return super.preHandle(request, response, handler);
+		return preHandle(request, response, handler);
 	}
 }
