@@ -5,8 +5,8 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>com.springboot</groupId>
-	<artifactId>simple-springboot-app</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+	<artifactId>simple-app</artifactId>
+	<version>o.1</version>
 	<!-- <packaging>jar</packaging> -->
     <packaging>war</packaging>
 	<description>Demo project for Spring Boot</description>
